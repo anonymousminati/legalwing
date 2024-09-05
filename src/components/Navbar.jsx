@@ -17,11 +17,30 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
   const router = useRouter();
   const pathname = usePathname();
   const navbarRef = useRef(null);
 
   const isActive = (href) => pathname === href;
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -43,7 +62,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav ref={navbarRef} className="fixed w-full z-20 top-0 left-0 md:px-6 lg:px-16">
+    <nav ref={navbarRef} className={`transition-all w-full z-20 top-0 left-0 md:px-6 lg:px-16 ${isSticky ? "fixed bg-white shadow-lg" : "relative bg-[#FFE115] "}`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <CompanyLogo className="w-8 h-8" />
@@ -53,7 +72,7 @@ export default function Navbar() {
             type="button"
             className="text-[#616161] bg-transparent hidden md:flex gap-2 item-center border-[0.5px] rounded-lg border-[#292929] hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
-            <PhoneIcon height={24} className="border-1 rounded-lg p-[4px] border-[#425066]" /> 
+            <PhoneIcon height={24} className="rounded-lg p-[4px] " /> 
             <p className="underline">+91 9067801412</p>
           </button>
           <button
@@ -72,11 +91,11 @@ export default function Navbar() {
           </button>
         </div>
         <div
-          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${toggleMenu ? "block" : "hidden"} md:border-b-2 md:border-[#425066] h-16 px-0 md:px-10 lg:px-24`}
+          className={` items-center justify-between w-full md:flex md:w-auto md:order-1 ${toggleMenu ? "block" : "hidden"}  h-16 px-0 md:px-10 lg:px-24`}
           id="navbar-cta"
         >
-          <ul className="bg-[#626262] md:bg-transparent flex flex-col gap-16 h-max font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            <li className={`${isActive('/') ? 'md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent' : 'border-0 h-16 flex items-center'}`}>
+          <ul className="bg-[#382828] md:bg-transparent flex flex-col gap-5 md:gap-16 h-max font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <li className={`hover:border-b-4 hover:border-blue-500 ${isActive('/') ? 'md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent' : 'border-0 h-16 flex items-center'}`}>
               <Link
                 href="/"
                 className={`w-full md:w-auto block py-2 px-3 md:p-0 text-white rounded md:bg-transparent ${isActive('/') ? 'md:text-blue-700' : 'md:text-gray-900'}`}
@@ -85,7 +104,7 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            <li className={isActive('/about') ? `md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent` : `border-0 h-16 flex items-center`}>
+            <li className={`hover:border-b-4 hover:border-blue-500 ${isActive('/about') ? 'md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent' : 'border-0 h-16 flex items-center'}`}>
               <Link
                 href="/about"
                 className={`w-full md:w-auto block py-2 px-3 md:p-0 text-white rounded md:bg-transparent ${isActive('/about') ? 'md:text-blue-700' : 'md:text-gray-900'}`}
@@ -93,7 +112,7 @@ export default function Navbar() {
                 About Us
               </Link>
             </li>
-            <li className={isActive('/services') ? `md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent` : `border-0 h-16 flex items-center`}>
+            <li className={`hover:border-b-4 hover:border-blue-500 ${isActive('/services') ? 'md:border-b-4 cursor-pointer h-16 rounded flex items-center md:border-[#425066] bg-blue-700 md:bg-transparent' : 'border-0 h-16 flex items-center'}`}>
               <Link
                 href="/services"
                 className={`w-full md:w-auto block py-2 px-3 md:p-0 text-white rounded md:bg-transparent ${isActive('/services') ? 'md:text-blue-700' : 'md:text-gray-900'}`}
