@@ -72,8 +72,8 @@ export default function Navbar() {
             type="button"
             className="text-[#616161] bg-transparent hidden md:flex gap-2 item-center border-[0.5px] rounded-lg border-[#292929] hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
-            <PhoneIcon height={24} className="rounded-lg p-[4px] " /> 
-            <p className="underline">+91 9067801412</p>
+            <PhoneIcon height={30} className="rounded-lg p-[4px] " /> 
+            <p className="underline-0 text-xl ">+91 9067801412</p>
           </button>
           <button
             onClick={() => setToggleMenu(!toggleMenu)}

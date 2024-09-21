@@ -31,8 +31,7 @@ export default function HomeConnectSection() {
 
                 </div>
                 <p className="text-medium leading-9 text-[#425066]">
-                    Lorem ipsum dolor sit amet consectetur. Id tortor nunc tristique orci felis condimentum feugiat in ut. Lectus eu donec sed ac.
-                </p>
+                Need expert legal advice for your rent agreement? Our experienced legal advisors are here to help. Whether you have questions or need personalized guidance, we’re just a call or message away.                </p>
                 <button className="bg-[#3B73A7] text-white px-6 py-4 rounded-lg flex items-center space-x-2 hover:bg-blue-600 w-max">
                     <span>Talk to Expert</span>
                     <span>→</span>

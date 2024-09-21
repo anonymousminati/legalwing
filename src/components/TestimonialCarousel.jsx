@@ -1,6 +1,8 @@
 // import Swiper core and required modules
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import UserSVG from '@/assets/images/user-svgrepo-com.svg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -12,41 +14,73 @@ export default function TestimonialCarousal() {
 
     const testimonials = [
         {
-            name: "Jane D",
-            profileImage: "https://pagedone.io/asset/uploads/1696229969.png",
+            name: "Vijay Ajwani",
+            profileImage:UserSVG,
             stars: 5,
-            comment: "Pagedone is simply the best tool of investment in the market right now.",
+            comment: "Good and efficient service. Staff is very cooperative and supportive of all queries. Thank you again",
         },
         {
-            name: "John S",
-            profileImage: "https://pagedone.io/asset/uploads/1696229990.png",
+            name: "Purushottam N Patil",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very prompt, highly co-operative and gives very quick service and immediately gives call back service also",
+        },
+        {
+            name: "Anil Nevaskar",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very good & prompt service 😊",
+        },
+        {
+            name: "Atul Hutke",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very nice team with proper guidance....",
+        },
+        {
+            name: "Anup Belsare",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very good, timely and professional service provided for online rent agreement.",
+        },
+        {
+            name: "Avinash Bhate",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Amazing service, quick response and very transparent fees",
+        },
+        {
+            name: "Vijay Lele",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very good timely service. They visited the rental flat and completed agreement process in 20 minutes. I did not have to go anywhere else.",
+        },
+        {
+            name: "rahul kashte",
+            profileImage:UserSVG,
+            stars: 3,
+            comment: "Good & affordable service",
+        },
+        {
+            name: "Rajeev Prasad",
+            profileImage:UserSVG,
+            stars: 5,
+            comment: "Very good service, staff behaviour very nice. They provide me rent agreement documents as per time.",
+        },
+        {
+            name: "Mohit Yadav",
+            profileImage:UserSVG,
             stars: 4,
-            comment: "A fantastic tool that has streamlined our workflow significantly.",
+            comment: "It is good place for agreement",
         },
         {
-            name: "Emily R",
-            profileImage: "https://pagedone.io/asset/uploads/1696230011.png",
-            stars: 5,
-            comment: "An essential part of our daily operations now. Highly recommended!",
-        },
-        {
-            name: "Jane D",
-            profileImage: "https://pagedone.io/asset/uploads/1696229969.png",
-            stars: 5,
-            comment: "Pagedone is simply the best tool of investment in the market right now.",
-        },
-        {
-            name: "John S",
-            profileImage: "https://pagedone.io/asset/uploads/1696229990.png",
+            name: "Pradeep Kharade",
+            profileImage:UserSVG,
             stars: 4,
-            comment: "A fantastic tool that has streamlined our workflow significantly.",
+            comment: "Good one n reliable ....",
         },
-        {
-            name: "Emily R",
-            profileImage: "https://pagedone.io/asset/uploads/1696230011.png",
-            stars: 5,
-            comment: "An essential part of our daily operations now. Highly recommended!",
-        },
+
+
         // Add more testimonials as needed
     ];
 
@@ -106,7 +140,7 @@ export default function TestimonialCarousal() {
                                 {testimonial.comment}
                             </p>
                             <div className="flex items-center gap-5">
-                                <img className="rounded-full w-12 h-12" src={testimonial.profileImage} alt={testimonial.name} />
+                                <Image className="rounded-full w-12 h-12" src={testimonial.profileImage} alt={testimonial.name} />
                                 <div className="grid gap-1">
                                     <h5 className="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600">
                                         {testimonial.name}

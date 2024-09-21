@@ -6,15 +6,14 @@ import HomeAbout from '@/assets/images/HomeAboutUs.svg';
 
 export default function HomeAboutUsSection() {
 
-    return <section className="bg-[#ffffff] min-h-screen  w-full mb-12">
+    return <section className="bg-[#ffffff] min-h-screen md:min-h-0  w-full mb-12">
         <div className="relative h-full">
 
             <div className="absolute top-0 w-full flex flex-col md:flex-row justify-around items-center h-full py-5 my-32">
                 <div className="w-full md:w-1/2 lg:w-1/3 p-6 md:p-10 flex flex-col gap-5 ">
 
                     <p className="text-5xl font-light text-[#425066]">
-                        Trust your future &
-                    </p>
+                    Welcome to Legal Wings!                    </p>
                     <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold">
                         <TypeAnimation
                             sequence={['A',
@@ -29,8 +28,7 @@ export default function HomeAboutUsSection() {
 
                     </div>
                     <p className="text-medium leading-9 text-[#425066]">
-                        Since 2018, we have leveraged rent agreement service into business value by automating activities, enhancing workflow, and increasing productivity. We are a committed service provider for all types of rent agreements. Whether commercial or residential, we will deliver fast and effective support that will optimize your time and reduce stress .
-                    </p>
+                    Since 2016, Rent Agreement Services Pune has committed itself to facilitating the creation and registration of rental agreements in Pune, ensuring a seamless and hassle-free experience. Our goal is to simplify the legal paperwork process for landlords and tenants, since we are aware of how complicated it may be.                    </p>
 
                 </div>
                 <div className="w-full md:w-1/2 lg:w-2/5 p-6 ">

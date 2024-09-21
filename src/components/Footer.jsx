@@ -114,7 +114,7 @@ const Footer = () => {
                                 >
                                     <PhoneIcon className='size-5 shrink-0 text-orange-500' />
 
-                                    <span className="flex-1 text-gray-700">+91 9067801412</span>
+                                    <span className="flex-1 text-gray-700">+91 7709415315</span>
                                 </Link>
                             </li>
 
@@ -124,7 +124,7 @@ const Footer = () => {
                                 <MapPinIcon className='size-5 shrink-0 text-orange-500' />
 
                                 <address className="-mt-0.5 flex-1 not-italic text-gray-700">
-                                    Office No. 6, Kadekar Plaza, D. P. Road, Kothrud, Pune 411038
+                                    Office No. 5, Kadekar Plaza, D. P. Road, Kothrud, Pune 411038
                                 </address>
                             </li>
                         </ul>
@@ -138,7 +138,6 @@ const Footer = () => {
                         <ul className="mt-6 space-y-4 text-sm">
                             <li><Link href="/about" className="text-gray-700 transition hover:opacity-75 hover:underline">ABOUT US</Link></li>
                             <li><Link href="/services" className="text-gray-700 transition hover:opacity-75 hover:underline">SERVICES</Link></li>
-                            <li><Link href="/process" className="text-gray-700 transition hover:opacity-75 hover:underline">PROCESS</Link></li>
                             <li><Link href="/contact" className="text-gray-700 transition hover:opacity-75 hover:underline">CONTACT US</Link></li>
 
                            

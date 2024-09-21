@@ -3,17 +3,14 @@ import React, { useState } from 'react';
 
 const faqData = [
   {
-    question: 'Where can I watch?',
-    answer: 'Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.',
+    question: '1.	What is a rent agreement?',
+    answer: 'A legal document known as a rent agreement sets forth the terms and circumstances that apply to the leasing of a property between a landlord and a tenant. It contains specifics like the monthly rent, the length of the lease, and each party\'s obligations.',
   },
-  { question: 'Mauris id nibh eu fermentum mattis purus?', answer: '' },
-  { question: 'Eros imperdiet rhoncus?', answer: '' },
-  { question: 'Fames imperdiet quam fermentum?', answer: '' },
-  { question: 'Varius vitae, convallis amet lacus sit aliquet nibh?', answer: '' },
-  { question: 'Tortor nisl pellentesque sit quis orci dolor?', answer: '' },
-  { question: 'Vestibulum mauris mauris elementum proin amet auctor ipsum nibh sollicitudin?', answer: '' },
-  { question: 'Vestibulum mauris mauris elementum proin amet auctor ipsum nibh sollicitudin?', answer: '' },
-  { question: 'Vestibulum mauris mauris elementum proin amet auctor ipsum nibh sollicitudin?', answer: '' },
+  { question: '2.	Why do I need a rent agreement?', answer: 'By laying out the conditions of the renting arrangement in plain language, a rent agreement protects both the landlord and the tenant, helps to avoid conflicts, and offers legal remedies if difficulties arise.' },
+  { question: '3.	How do I start the process with Rent Agreement Services Pune?', answer: 'Simply contact us via phone at 7709415315 or email at our email address. We’ll guide you through the necessary steps, including document submission and scheduling any required biometric verification.' },
+  { question: '4.	What documents are required to create a rent agreement?', answer: 'Identification documents such as a passport or Aadhar card, evidence of property ownership, and proof of address are usually required. Based on your unique needs, our staff will present you with a comprehensive list.' },
+  { question: '5.	How long does it take to prepare and register a rent agreement?', answer: 'After receiving all necessary paperwork, the process typically takes … days. Drafting, reviewing, and registering are included in this.' },
+
 ];
 
 const FAQ = () => {
